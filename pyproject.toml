@@ -1,7 +1,3 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
 [project]
 name = "darkthoughtbench"
 version = "0.0.1"
@@ -11,22 +7,50 @@ authors = [
 ]
 
 readme = "README.md"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    
+requires-python = ">=3.10.5"
+
+dependencies = ["inspect-ai", "pydantic"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+  "basedpyright",
+  "debugpy",
+  "pandas-stubs",
+  "pytest-asyncio",
+  "pytest-mock",
+  "pytest-watcher",
+  "pytest",
+  "ruff==0.9.6",
 ]
-requires-python = "~=3.10.0"
+analysis = [
+  "click",
+  "dominate",
+  "krippendorff",
+  "matplotlib",
+  "pandas",
+  "plotly",
+  "ruamel-yaml",
+  "tqdm",
+]
+llms = [
+  "anthropic",
+  "azure-ai-inference",
+  "goodfire",
+  "google-generativeai",
+  "groq",
+  "mistral",
+  "openai",
+]
 
+[project.entry-points.inspect_ai]
+darkthoughtbench = "darkthoughtbench._registry"
 
-[tool.ruff]
-line-length = 99
-src = ["darkthoughtbench"]
-include = ["pyproject.toml", "darkthoughtbench/**/*.py"]
+[tool.pyright]
+reportAny = false
 
-[tool.ruff.lint]
-extend-select = ["I"]  # Add import sorting
-
-[tool.ruff.lint.isort]
-known-first-party = ["darkthoughtbench"]
-force-sort-within-sections = true
-
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
