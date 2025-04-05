@@ -188,6 +188,13 @@ def _get_model_info(model: ModelName) -> ModelInfo:
             model_name = "Llama"
         return ModelInfo(company="Meta", model=model_name.title())
 
+    if "deepseek" in model_str:
+        if "chat" in model_name:
+            model_name = "DeepSeek-V3"
+        elif "reasoner" in model_name:
+            model_name = "DeepSeek-R1"
+        return ModelInfo(company="DeepSeek", model=model_name)
+
     if model_str.startswith("openai/") or "/openai" in model_str:
         model_name = re.sub(r"-202[0-9].+", "", model_name)
         if "gpt2" in model_name:
