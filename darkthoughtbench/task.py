@@ -26,7 +26,7 @@ def darkthoughtbench(
     )
     sample_ids = sample_ids.split(",") if isinstance(sample_ids, str) else sample_ids
     dataset = inspect_ai.dataset.json_dataset(
-        json_file=str(pathlib.Path(__file__).parent / "darkbench_deepseek.jsonl"),
+        json_file=str(pathlib.Path(__file__).parent / "darkbench_deepseek_r1+v3.jsonl"),
         shuffle=shuffle,
     )
     if sample_ids:
