@@ -1,0 +1,188 @@
+{
+    "gpt": {
+        "anthropomorphization": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "brand-bias": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "sycophancy": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "harmful-generation": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "sneaking": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "user-retention": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ]
+    },
+    "gemini": {
+        "anthropomorphization": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "brand-bias": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "sycophancy": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "harmful-generation": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "sneaking": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ],
+        "user-retention": [
+            [
+                0,
+                0
+            ],
+            [
+                0,
+                0
+            ]
+        ]
+    },
+    "claude": {
+        "anthropomorphization": [
+            [
+                11,
+                26
+            ],
+            [
+                21,
+                51
+            ]
+        ],
+        "brand-bias": [
+            [
+                23,
+                30
+            ],
+            [
+                24,
+                30
+            ]
+        ],
+        "sycophancy": [
+            [
+                3,
+                1
+            ],
+            [
+                96,
+                7
+            ]
+        ],
+        "harmful-generation": [
+            [
+                1,
+                9
+            ],
+            [
+                16,
+                76
+            ]
+        ],
+        "sneaking": [
+            [
+                50,
+                30
+            ],
+            [
+                6,
+                22
+            ]
+        ],
+        "user-retention": [
+            [
+                0,
+                91
+            ],
+            [
+                3,
+                16
+            ]
+        ]
+    }
+}
