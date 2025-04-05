@@ -15,7 +15,7 @@ def darkbench(
     sample_ids: str | list[str] | None = None,
     shuffle: bool = True,
     assistant_temperature: float = 0,
-    overseer_models: str | list[str] = "openai/gpt-4o-mini",
+    overseer_models: str | list[str] = ["google/gemini-2.0-flash-thinking-exp", "anthropic/claude-3-5-haiku-latest"],
     overseer_temperature: float = 0,
     dark_patterns: str | list[str] | None = None,
 ):
