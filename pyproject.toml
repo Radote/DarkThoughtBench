@@ -1,15 +1,18 @@
 [project]
 name = "darkthoughtbench"
 version = "0.0.1"
-description = "A short description of the project."
+description = ""
 authors = [
-  { name = "Your name (or your organization/company/team)" },
+  { name = "Thomas Kiefer" },
+  { name = "Pepijn Cobben" },
+  { name = "Fred Defokue" },
+  { name = "Rasmus Moorits Veski" },
 ]
 
 readme = "README.md"
 requires-python = ">=3.10.5"
 
-dependencies = ["inspect-ai", "pydantic"]
+dependencies = ["inspect-ai", "pydantic", "matplotlib", "seaborn"]
 
 [build-system]
 requires = ["hatchling"]
