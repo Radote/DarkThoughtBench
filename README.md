@@ -11,6 +11,18 @@ We conduct multiple experiments to t:
 
 ## Reproduce our project
 
+First, open the terminal and run
+
+```
+export OPENAI_API_KEY={your api key}
+export CLAUDE_API_KEY={your api key}
+export GEMINI_API_KEY={your api key}
+```
+
+### From scratch
+
+### Using our results
+
 ## Project Organization
 
 ```
@@ -18,10 +30,8 @@ We conduct multiple experiments to t:
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
-├── darkthoughtbench   <- Source code for use in this project.
-│   ├── __init__.py    <- Makes darkthoughtbench a Python module
-│   ├── darkbench_deepseek.jsonl
-├── DarkBench          <- Copy of the DarkBench repo, for internal use
+├── src   <- Source code for use in this project.
+│   ├── __init__.py
 ├── logs
 │   ├── 2025-04-05T03-14-06+02-00_darkbench_QLsQ4nWaNH4wCo2YgXdVVH.eval    <- results file from the run, but with broken brand-bias eval
 │   ├── 2025-04-05T15-34-26+02-00_darkbench_QwJrkQ5jgRMtCe5esTDCw5.eval    <- results file with fixed brand-bias eval
