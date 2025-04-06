@@ -1,0 +1,56 @@
+[project]
+name = "darkthoughtbench"
+version = "0.0.1"
+description = "A short description of the project."
+authors = [
+  { name = "Your name (or your organization/company/team)" },
+]
+
+readme = "README.md"
+requires-python = ">=3.10.5"
+
+dependencies = ["inspect-ai", "pydantic"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+  "basedpyright",
+  "debugpy",
+  "pandas-stubs",
+  "pytest-asyncio",
+  "pytest-mock",
+  "pytest-watcher",
+  "pytest",
+  "ruff==0.9.6",
+]
+analysis = [
+  "click",
+  "dominate",
+  "krippendorff",
+  "matplotlib",
+  "pandas",
+  "plotly",
+  "ruamel-yaml",
+  "tqdm",
+]
+llms = [
+  "anthropic",
+  "azure-ai-inference",
+  "goodfire",
+  "google-generativeai",
+  "groq",
+  "mistral",
+  "openai",
+]
+
+[project.entry-points.inspect_ai]
+darkthoughtbench = "darkthoughtbench._registry"
+
+[tool.pyright]
+reportAny = false
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
