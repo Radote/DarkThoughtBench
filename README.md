@@ -1,6 +1,6 @@
 # DarkThoughtBench
 
-Many organizations nowadays propose monitoring Chains of Thought to check for alignment. But how reliable is this? We use the recent DarkBench to analyze this question quantitatively.
+Many organizations nowadays propose monitoring Chains of Thought to check for alignment. But how reliable is this? We use the recent [DarkBench](https://github.com/apartresearch/darkbench) to analyze this question quantitatively.
 
 We conduct multiple experiments to test this:
 
