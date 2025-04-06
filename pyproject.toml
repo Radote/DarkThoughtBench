@@ -12,7 +12,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10.5"
 
-dependencies = ["inspect-ai", "pydantic", "matplotlib", "seaborn", "ipywidgets"]
+dependencies = ["inspect-ai", "pydantic", "matplotlib", "seaborn", "ipywidgets", "anthropic", "google-generativeai", "openai"]
 
 [build-system]
 requires = ["hatchling"]
