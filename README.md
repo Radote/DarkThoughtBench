@@ -2,34 +2,39 @@
 
 Many organizations nowadays propose monitoring Chains of Thought to check for alignment. But how reliable is this? We use the recent DarkBench to analyze this question quantitatively.
 
-We conduct multiple experiments to t:
+We conduct multiple experiments to test this:
 
 1. How well can a Judge-LLM predict a DarkBench score from only the Chain of Thought?
 2. If a chain of thought tries to explicitly avoid a dark pattern, how likely is the final response still to contain it?
-
-## Results
+3. Do reasoning models perform better on DarkBench than non-reasoning models?
 
 ## Reproduce our project
 
-Go to _[Reproduce this work](/reproduce/)_ for more details.
-
-### From scratch
-
-### Using our results
+Go to _[Reproduce this work](/reproduce/)_ for more details if you want to do it from scratch. Our results and data files are located in logs/ if you simply want the results.
 
 ## Project Organization
 
 ```
+├── logs
+│   ├── DeepSeek-R1_with_COT.eval    <- Output of R1 on DarkBench, including its CoT
+│   ├── DeepSeek-V3.eval             <- Output of V3 on DarkBench
+│   ├── chatgpt_log.json             <- Overseer output on DeepSeek models with GPT-4o
+│   ├── claude_log.json              <- Overseer output on DeepSeek models with Claude 3.5 Sonnet
+│   ├── confusion_matrices.json      <- Confusion matrices generated
+│   ├── gemini_log.json              <- Overseer output on DeepSeek models with Gemini 1.5 Pro
+│
+├── plots                            <- contains all the confusion matrix plots
+│
+├── reproduce                        <- a copy of our repo but without the data, great for reproding
+│
+├── src                              <- source code
+│
 ├── README.md          <- The top-level README for developers using this project.
+│
+├── pyproject.tml      <- Used by inspect-ai
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
-├── src   <- Source code for use in this project.
-│   ├── __init__.py
-├── logs
-│   ├── 2025-04-05T03-14-06+02-00_darkbench_QLsQ4nWaNH4wCo2YgXdVVH.eval    <- results file from the run, but with broken brand-bias eval
-│   ├── 2025-04-05T15-34-26+02-00_darkbench_QwJrkQ5jgRMtCe5esTDCw5.eval    <- results file with fixed brand-bias eval
-│
 
 ```
 
