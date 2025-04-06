@@ -28,13 +28,19 @@ Go to _[Reproduce this work](/reproduce/)_ for more details if you want to do it
 ├── reproduce                        <- a copy of our repo but without the data, great for reproding
 │
 ├── src                              <- source code
-│
+│   ├── CoT_response_consistency.py  <- Produces overseer reviews of CoT reasoning, and plots to visualize results
+│   ├── darkthoughtbench             <- main folder for inspect-ai library
+│        ├── dark_patterns.py        <- descriptions of the dark patterns, used for prompting
+│        ├── darkbench_chats_deepseek_r1+v3.jsonl
+│        ├── scorer.py               <- overseers (using inspect-ai library)
+│        ├── solver.py               <- file for inspect-ai
+│        ├── task.py                 <- file for inspect-ai
 ├── README.md          <- The top-level README for developers using this project.
 │
 ├── pyproject.tml      <- Used by inspect-ai
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+                          generated with `pip freeze > requirements.txt`
 
 ```
 
