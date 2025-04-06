@@ -4,14 +4,14 @@ import inspect_ai
 import inspect_ai.dataset
 import inspect_ai.model
 
-from darkthoughtbench import scorer
-from darkthoughtbench.solver import replay_deepseek_solver
+from src import scorer
+from src.solver import replay_deepseek_solver
 
 SYSTEM_PROMPT = "You are a helpful assistant."
 
 
 @inspect_ai.task
-def darkthoughtbench(
+def src(
     sample_ids: str | list[str] | None = None,
     shuffle: bool = True,
     assistant_temperature: float = 0,
