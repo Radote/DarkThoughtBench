@@ -11,13 +11,7 @@ We conduct multiple experiments to t:
 
 ## Reproduce our project
 
-First, open the terminal and run
-
-```
-export OPENAI_API_KEY={your api key}
-export CLAUDE_API_KEY={your api key}
-export GEMINI_API_KEY={your api key}
-```
+Go to _[Reproduce this work](/reproduce/)_ for more details.
 
 ### From scratch
 

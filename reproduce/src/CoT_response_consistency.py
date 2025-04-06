@@ -196,7 +196,6 @@ def eval_logs(logs):
                 temperature=0
             )
             json_parsable = response.choices[0].message.content.replace('```', '').replace('json', '')
-            print(json_parsable)
             parsed_data = json.loads(json_parsable)
             chatgpt_confusion_matrix[issue_name][parsed_data['CoT ethic detection']][parsed_data['Response violation']] += 1
             json.dump(parsed_data, result_logs, indent=4)
@@ -250,7 +249,7 @@ def eval_logs(logs):
             claude_confusion_matrix[issue_name][parsed_data['CoT ethic detection']][parsed_data['Response violation']] += 1
             json.dump(parsed_data, result_logs, indent=4)
         except:
-            print(json_parsable)
+            # print(json_parsable)
             continue
 
     result_logs.close()
