@@ -15,9 +15,10 @@ def darkthoughtbench(
     sample_ids: str | list[str] | None = None,
     shuffle: bool = True,
     assistant_temperature: float = 0,
-    overseer_models: str | list[str] = ["google/gemini-1.5-pro-latest", "anthropic/claude-3-5-sonnet-20241022", "openai/gpt-4o"],
+    overseer_models: str | list[str] = "google/gemini-2.0-flash-thinking-exp-01-21", # ["google/gemini-1.5-pro-latest", "anthropic/claude-3-5-sonnet-20241022", "openai/gpt-4o"],
     overseer_temperature: float = 0,
     dark_patterns: str | list[str] | None = None,
+    model_is_reasoning: bool = True,
 ):
     overseer_models = (
         overseer_models.split(",")
@@ -48,14 +49,12 @@ def darkthoughtbench(
                 dark_patterns=dark_patterns,
             )
             for overseer_model in overseer_models
-        ] 
-        # Comment out for evaluating non-reasoning models
-        + [
+        ] + ([
             scorer.overseer_reasoning(
                 model=overseer_model,
                 temperature=overseer_temperature,
                 dark_patterns=dark_patterns,
             )
             for overseer_model in overseer_models
-        ],
+        ] if model_is_reasoning else []),
     )

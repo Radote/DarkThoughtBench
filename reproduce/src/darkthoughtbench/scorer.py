@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from inspect_ai.scorer import Target
     from inspect_ai.solver import TaskState
 
-    from src.dark_patterns import DarkPattern
+    from darkthoughtbench.dark_patterns import DarkPattern
 
 logger = logging.getLogger(__name__)
 
