@@ -8,6 +8,9 @@ We conduct multiple experiments to test this:
 2. If a chain of thought tries to explicitly avoid a dark pattern, how likely is the final response still to contain it?
 3. Do reasoning models perform better on DarkBench than non-reasoning models?
 
+## Read our work
+Go to [Report](/DimSeat%20Report.pdf) to read about our ideas, process and results.
+
 ## Reproduce our project
 
 Go to _[Reproduce this work](/reproduce/)_ for more details if you want to do it from scratch. Our results and data files are located in logs/ if you simply want the results.
